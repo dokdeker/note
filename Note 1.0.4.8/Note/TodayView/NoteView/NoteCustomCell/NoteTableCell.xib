@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="114" id="GYt-5j-Uc9" customClass="NoteTableCell" customModule="Note" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="632" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GYt-5j-Uc9" id="LQF-6e-bkd">
+                <rect key="frame" x="0.0" y="0.0" width="632" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IvY-Et-fVJ">
+                        <rect key="frame" x="65" y="0.0" width="557" height="114"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <connections>
+                            <outlet property="delegate" destination="GYt-5j-Uc9" id="fyf-Fs-dMg"/>
+                        </connections>
+                    </textView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5D-Bx-mS2">
+                        <rect key="frame" x="20" y="8" width="26" height="25"/>
+                        <state key="normal">
+                            <imageReference key="image" image="square" catalog="system" symbolScale="default"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22" weight="semibold"/>
+                        </state>
+                        <connections>
+                            <action selector="checkMarkAction:" destination="GYt-5j-Uc9" eventType="touchUpInside" id="qtL-UC-i3a"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="a5D-Bx-mS2" firstAttribute="top" secondItem="LQF-6e-bkd" secondAttribute="top" constant="8" id="5DJ-hX-wOg"/>
+                    <constraint firstItem="IvY-Et-fVJ" firstAttribute="top" secondItem="LQF-6e-bkd" secondAttribute="top" id="B5N-XB-W0w"/>
+                    <constraint firstItem="a5D-Bx-mS2" firstAttribute="leading" secondItem="LQF-6e-bkd" secondAttribute="leadingMargin" id="RkJ-tz-MHu"/>
+                    <constraint firstAttribute="bottom" secondItem="IvY-Et-fVJ" secondAttribute="bottom" id="c1z-aK-8V5"/>
+                    <constraint firstItem="IvY-Et-fVJ" firstAttribute="leading" secondItem="LQF-6e-bkd" secondAttribute="leading" constant="65" id="xuM-xK-MPn"/>
+                    <constraint firstAttribute="trailing" secondItem="IvY-Et-fVJ" secondAttribute="trailing" constant="10" id="yIR-MW-26Z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bodyLeftConst" destination="xuM-xK-MPn" id="WOF-1y-cPx"/>
+                <outlet property="checkMarkOutlet" destination="a5D-Bx-mS2" id="gtx-6l-18v"/>
+                <outlet property="textBody" destination="IvY-Et-fVJ" id="pdt-X9-GDP"/>
+            </connections>
+            <point key="canvasLocation" x="172.46376811594203" y="54.910714285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
